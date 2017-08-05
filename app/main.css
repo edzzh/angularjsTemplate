@@ -1,4 +1,117 @@
+@import url("https://fonts.googleapis.com/css?family=Pacifico");
 body {
-  background-color: white; }
+  background-image: url("images/banner.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover; }
+
+.navbar {
+  margin: auto;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  background: transparent; }
+
+.navbar-toggler {
+  cursor: pointer; }
+
+.navbar-nav {
+  margin-left: auto;
+  font-size: 1.2em; }
+
+.navbar-inverse .navbar-nav .nav-link {
+  color: white;
+  font-size: 1.2em; }
+  .navbar-inverse .navbar-nav .nav-link:hover {
+    color: #f4ff00; }
+
+.nav-link {
+  color: red; }
+
+/******Nav End******/
+/******Return to top button**********/
+#return-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: black;
+  background: rgba(0, 0, 0, 0.7);
+  width: 50px;
+  height: 50px;
+  display: block;
+  text-decoration: none;
+  -webkit-border-radius: 35px;
+  -moz-border-radius: 35px;
+  border-radius: 35px;
+  display: none;
+  -webkit-transition: all 0.6s linear;
+  -moz-transition: all 0.6s ease;
+  -ms-transition: all 0.6s ease;
+  -o-transition: all 0.6s ease;
+  transition: all 0.6s ease;
+  z-index: 999; }
+  #return-to-top i {
+    color: #fff;
+    margin: 0;
+    position: relative;
+    left: 16px;
+    top: 13px;
+    font-size: 19px;
+    -webkit-transition: all 0.6s ease;
+    -moz-transition: all 0.6s ease;
+    -ms-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;
+    transition: all 0.6s ease; }
+  #return-to-top:hover {
+    background: rgba(0, 0, 0, 0.9); }
+  #return-to-top:hover i {
+    color: #fff;
+    top: 5px; }
+
+/**************Return button end******/
+#home p, #about p, #contact p {
+  text-align: justify;
+  text-indent: 20px; }
+
+.btn {
+  background-color: #f4ff00;
+  border: 1px solid #f4ff00;
+  color: black; }
+
+.banner-text {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  font-weight: 600;
+  color: #39ffdf;
+  background-color: transparent;
+  -webkit-animation: hue 60s infinite linear; }
+
+.card {
+  animation-delay: 0.9s;
+  box-shadow: 7px 7px 22px black; }
+
+/***********Screen Media*************/
+@media screen and (max-width: 574px) {
+  .card2 {
+    margin-top: 10px; } }
+@media screen and (max-width: 992px) {
+  .navbar-nav {
+    text-align: center; }
+    .navbar-nav ul {
+      list-style: none; }
+      .navbar-nav ul li {
+        display: inline; }
+
+  .card-img-top {
+    height: 400px; } }
+@media screen and (max-width: 400px) {
+  .card-img-top {
+    height: 230px; } }
+/***********Hue animation*********/
+@-webkit-keyframes hue {
+  from {
+    -webkit-filter: hue-rotate(0deg); }
+  to {
+    -webkit-filter: hue-rotate(-360deg); } }
 
 /*# sourceMappingURL=main.css.map */

@@ -2,24 +2,149 @@
 <html lang="en" ng-app="App">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Edgara App</title>
+    <!-- Bootstrap style tag -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
           integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <!-- Animated.css tag for great animations -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">
+    <!-- user style -->
     <link rel="stylesheet" type="text/css" href="main.css">
 </head>
-<body>
+<body ng-controller="mainController">
+    <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+    <nav class="navbar navbar-toggleable-md navbar-inverse bg-faded">
+        <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse"
+                data-target="#navbarText" aria-expanded="false" aria-label="Toggle Navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/"><span class="banner-text">TestDevLab</span></a>
+        <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="nav navbar-nav">
+                <li class="new-item">
+                    <a class="nav-link" ng-click="scrollTo('home')" style="cursor: pointer;">Home</a>
+                </li>
+                <li class="new-item">
+                    <a class="nav-link" ng-click="scrollTo('about')" style="cursor: pointer;">About</a>
+                </li>
+                <li class="new-item">
+                    <a class="nav-link" ng-click="scrollTo('contact')" style="cursor: pointer;">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav> <!--nav end-->
 
-    <div class="container-fluid">
+    <!--Cardss information start-->
+    <div class="container mt-4">
         <div class="row">
-            <div class="col-lg-12 col-xs-12" ng-controller="test">
-                <div class="banner">Hello, {{name}}!</div>
+            <div class="col-md-6 col-sm-6">
+              <div class="card animated shake">
+                  <div class="card-block">
+                      <h3 class="card-title">Activity</h3>
+                      <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                      <a class="btn btn-primary" style="cursor: pointer;">See Activity</a>
+                  </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-6 card2">
+                <div class="card animated shake">
+                    <div class="card-block">
+                        <h3 class="card-title">Projects</h3>
+                        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                        <a href="#" class="btn btn-primary">See Projects</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <!-- Large Card start -->
+    <div class="container my-4">
+        <div class="row">
+            <div class="col-md-12 col-lg-12 col-sm-12">
+                <div class="card">
+                    <img class="card-img-top" src="images/alps.jpeg" alt="image" width="100%" height="600px">
+                    <div class="card-block">
+                        <h4 class="card-title text-center">Adventures</h4>
+                        <p class="card-text text-center">This is a wider card with supporting text below as a natural lead-in to
+                            additional content. This content is a little bit longer.</p>
+                        <p class="text-center"><a href="#" class="btn btn-primary">See Adventures</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Home jumbotron-->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div id="home" class="container">
+                        <h1 class="display-2 text-center">Home</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- About jumbotron -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div id="about" class="container">
+                        <h1 class="display-2 text-center">About</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact jumbotron -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="jumbotron jumbotron-fluid">
+                    <div id="contact" class="container">
+                        <h1 class="display-2 text-center">Contact</h1>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                            incididunt ut labore et dolore magna aliqua.
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- script tags formm jQuery, BootstrapJs, asset script.js and bundle.js from webpack -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js"
+            integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js"
+            integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn"
+            crossorigin="anonymous"></script>
+    <script src="./script.js"></script>
     <script src="../bundle.js"></script>
 </body>
 </html>

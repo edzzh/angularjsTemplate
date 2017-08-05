@@ -21,16 +21,6 @@ module.exports = {
                   exclude: '/node_modules',
                   loader: 'raw-loader'
               }
-          ],
-          rules: [
-              {
-                  test: '/\.less$/',
-                  use: [
-                      {loader: "style-loader"},
-                      {loader: "css-loader"},
-                      {loader: "less-loader"}
-                  ]
-              }
           ]
       }
 
